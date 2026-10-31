@@ -6,150 +6,207 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="theme-color" content="#28121d" />
-  <title>Nuestro pequeño infinito | Marcelo & Verónica</title>
+  <meta name="theme-color" content="#29151f" />
+  <title>Nuestro pequeño infinito ♡</title>
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600&family=Parisienne&display=swap" rel="stylesheet">
 </head>
 
-<body class="desbloqueado">
+<body>
 
-<main id="contenidoPrincipal">
+<nav class="navegacion">
+  <a href="#inicio" class="marca">Nuestro infinito <span>♡</span></a>
+  <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú">☰</button>
+  <div class="menu" id="menu">
+    <a href="#historia">Historia</a>
+    <a href="#musica">Música</a>
+    <a href="#tiempo">Nuestro tiempo</a>
+    <a href="#recuerdos">Recuerdos</a>
+    <a href="#carta">Carta</a>
+  </div>
+</nav>
 
-  <nav>
-    <a href="#inicio" class="logo">Nuestro pequeño infinito <span>♡</span></a>
-    <div class="enlaces">
-      <a href="#historia">Historia</a>
-      <a href="#tiempo">Nuestro tiempo</a>
-      <a href="#recuerdos">Recuerdos</a>
-      <a href="#carta">Carta</a>
-    </div>
-  </nav>
+<main>
 
+  <!-- PORTADA -->
   <header class="portada" id="inicio">
-    <div class="destellos">✦ &nbsp; ♡ &nbsp; ✦</div>
-    <p class="sobrelinea">19 DE MAYO DE 2025</p>
-    <h1>Un amor que se convirtió<br><em>en nuestro pequeño infinito</em></h1>
-    <p class="subtitulo">Entre tantas personas, la vida nos permitió encontrarnos.</p>
-    <p class="nombres-portada">Marcelo Javier <span>♡</span> Verónica</p>
-    <a href="#historia" class="boton">DESCUBRIR NUESTRA HISTORIA</a>
-    <div class="flor">❀</div>
+    <div class="portada-marco">
+      <span class="etiqueta-portada">✦ UNA HISTORIA DE DOS ✦</span>
+      <div class="corazon-portada">♡</div>
+      <p class="fecha-portada">19 · 05 · 2025</p>
+
+      <h1>Nuestro pequeño<br><em>infinito</em></h1>
+
+      <div class="linea-dorada"></div>
+
+      <p class="frase-portada">
+        Dos personas, muchos recuerdos<br>
+        y una historia que sigue escribiéndose.
+      </p>
+
+      <p class="nombres-portada">Marcelo Javier <span>&</span> Verónica</p>
+
+      <a href="#historia" class="boton">DESCUBRIR NUESTRA HISTORIA ↓</a>
+    </div>
+    <span class="decoracion decoracion-uno">✿</span>
+    <span class="decoracion decoracion-dos">✧</span>
+    <span class="decoracion decoracion-tres">♡</span>
   </header>
 
-  <!-- MÚSICA -->
-  <section class="seccion musica">
-    <p class="sobrelinea">UNA PLAYLIST PARA NOSOTROS</p>
-    <h2>La banda sonora de nuestro amor</h2>
-    <p>Cada canción guarda un sentimiento y un pedacito de nuestra historia.</p>
+  <!-- HISTORIA -->
+  <section class="seccion historia" id="historia">
+    <div class="encabezado">
+      <span class="etiqueta">CAPÍTULO UNO</span>
+      <h2>Donde todo comenzó</h2>
+      <span class="ornamento">──── ♡ ────</span>
+    </div>
 
-    <div class="spotify">
+    <div class="historia-contenido">
+      <div class="historia-imagen">
+        <img src="/fotos/foto1.jpg.jpeg" alt="Uno de nuestros recuerdos">
+        <span>Un comienzo bonito ♡</span>
+      </div>
+
+      <div class="historia-texto">
+        <span class="letra-grande">H</span>
+        <p>
+          Hay encuentros que llegan sin avisar y terminan convirtiéndose
+          en una parte importante de nuestra vida. Así comenzó nuestra
+          historia, un 19 de mayo de 2025.
+        </p>
+        <p>
+          Desde aquel día hemos compartido conversaciones, sonrisas,
+          momentos especiales y también aprendizajes. Cada etapa ha
+          dejado algo en nosotros y ha formado parte de este camino.
+        </p>
+        <p>
+          No somos una historia perfecta, pero tenemos recuerdos que
+          merecen ser guardados y muchas páginas que todavía podemos
+          escribir.
+        </p>
+        <div class="firma-pequena">Con cariño, para nosotros ♡</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- MÚSICA -->
+  <section class="seccion musica" id="musica">
+    <div class="encabezado">
+      <span class="etiqueta">NUESTRA MÚSICA</span>
+      <h2>Este amor del bueno</h2>
+      <span class="ornamento">──── ♡ ────</span>
+      <p class="introduccion">
+        Dos canciones para acompañar un pequeño pedacito de nuestra historia.
+      </p>
+    </div>
+
+    <div class="musica-contenedor">
+      <div class="disco">♫</div>
+      <p class="musica-titulo">Una melodía para nosotros</p>
+      <p class="musica-subtitulo">Simplemente, gracias.</p>
+
       <iframe
-        title="Nuestra playlist romántica"
+        id="spotifyPlayer"
+        title="Nuestra música"
         src="https://open.spotify.com/embed/playlist/7wLdnNferEN3IH6IMJgMMw?utm_source=generator&theme=0"
         width="100%"
         height="380"
         frameborder="0"
-        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"
-        loading="lazy">
+        allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture">
       </iframe>
+
+      <button id="iniciarMusica" class="boton-musica">
+        ♡ REPRODUCIR NUESTRA MÚSICA ♡
+      </button>
+
+      <p class="nota-musica">
+        Si tu celular no inicia la música automáticamente, toca el botón
+        para comenzar a escucharla.
+      </p>
     </div>
-
-    <p class="dedicatoria-musica">
-      Para escuchar, recordar y sentir que siempre hay una canción que nos representa. ♡
-    </p>
-  </section>
-
-  <!-- HISTORIA -->
-  <section class="seccion historia" id="historia">
-    <p class="sobrelinea">ASÍ COMENZÓ TODO</p>
-    <h2>Nuestra historia</h2>
-    <div class="adorno">──── ♡ ────</div>
-
-    <p class="texto-historia">
-      El 19 de mayo de 2025 comenzó una historia que poco a poco se convirtió
-      en algo muy especial. Desde entonces hemos compartido momentos,
-      conversaciones, sonrisas, aprendizajes y también dificultades.
-      No todo ha sido perfecto, pero cada experiencia forma parte de lo que
-      somos. Esta página es un pequeño recuerdo de nuestro camino y de todo
-      lo bonito que todavía nos queda por vivir.
-    </p>
-
-    <blockquote>
-      “No se trata de tener una historia perfecta, sino de construir una
-      historia que tenga sentido para los dos.”
-    </blockquote>
   </section>
 
   <!-- CONTADOR -->
   <section class="seccion tiempo" id="tiempo">
-    <p class="sobrelinea">DESDE AQUEL 19 DE MAYO</p>
-    <h2>Todo este tiempo juntos</h2>
-    <p class="descripcion">Cada segundo cuenta en nuestra historia.</p>
-
-    <div class="contador">
-      <div><strong id="dias">0</strong><span>DÍAS</span></div>
-      <div><strong id="horas">00</strong><span>HORAS</span></div>
-      <div><strong id="minutos">00</strong><span>MINUTOS</span></div>
-      <div><strong id="segundos">00</strong><span>SEGUNDOS</span></div>
+    <div class="encabezado">
+      <span class="etiqueta">NUESTRO CAMINO</span>
+      <h2>El tiempo que llevamos compartiendo</h2>
+      <span class="ornamento">──── ♡ ────</span>
+      <p class="introduccion">
+        Desde aquel día hasta cada nuevo segundo de nuestra historia.
+      </p>
     </div>
 
-    <p class="fecha-especial">19 de mayo de 2025 · El comienzo de nosotros ♡</p>
-
-    <div class="proximo">
-      <p class="sobrelinea">NUESTRO PRÓXIMO ANIVERSARIO</p>
-      <h3>19 de noviembre de 2026</h3>
-
+    <div class="contador-marco">
+      <p class="contador-titulo">DESDE EL 19 DE MAYO DE 2025</p>
       <div class="contador">
+        <div><strong id="dias">0</strong><span>DÍAS</span></div>
+        <div><strong id="horas">00</strong><span>HORAS</span></div>
+        <div><strong id="minutos">00</strong><span>MINUTOS</span></div>
+        <div><strong id="segundos">00</strong><span>SEGUNDOS</span></div>
+      </div>
+      <p class="contador-pie">Cada instante forma parte de nosotros ♡</p>
+    </div>
+
+    <div class="proximo-aniversario">
+      <span class="etiqueta">UNA NUEVA FECHA ESPECIAL</span>
+      <h3>19 de noviembre de 2026</h3>
+      <p>Un año y seis meses de nuestra historia</p>
+
+      <div class="contador contador-pequeno">
         <div><strong id="cdias">00</strong><span>DÍAS</span></div>
         <div><strong id="choras">00</strong><span>HORAS</span></div>
         <div><strong id="cminutos">00</strong><span>MINUTOS</span></div>
         <div><strong id="csegundos">00</strong><span>SEGUNDOS</span></div>
       </div>
-
       <p id="mensajeCuenta" class="mensaje-cuenta"></p>
     </div>
   </section>
 
-  <!-- LÍNEA DEL TIEMPO -->
-  <section class="seccion linea-tiempo">
-    <p class="sobrelinea">UN CAMINO LLENO DE RECUERDOS</p>
-    <h2>Pequeños capítulos de nosotros</h2>
+  <!-- CAPÍTULOS -->
+  <section class="seccion capitulos">
+    <div class="encabezado">
+      <span class="etiqueta">NUESTROS CAPÍTULOS</span>
+      <h2>Una historia hecha de momentos</h2>
+      <span class="ornamento">──── ♡ ────</span>
+    </div>
 
-    <div class="timeline">
-      <article>
-        <span class="punto">♡</span>
+    <div class="capitulos-lista">
+      <article class="capitulo">
+        <span class="numero-capitulo">01</span>
         <div>
           <small>19 DE MAYO DE 2025</small>
-          <h3>El comienzo</h3>
-          <p>El día en que empezó nuestra historia.</p>
+          <h3>El primer capítulo</h3>
+          <p>El comienzo de una historia que poco a poco se volvió especial.</p>
         </div>
       </article>
 
-      <article>
-        <span class="punto">♡</span>
+      <article class="capitulo">
+        <span class="numero-capitulo">02</span>
         <div>
           <small>NUESTROS PRIMEROS MESES</small>
-          <h3>Aprendiendo juntos</h3>
-          <p>Conociéndonos, compartiendo y creando recuerdos.</p>
+          <h3>Aprender a conocernos</h3>
+          <p>Descubrir detalles, compartir momentos y crear recuerdos.</p>
         </div>
       </article>
 
-      <article>
-        <span class="punto">♡</span>
+      <article class="capitulo">
+        <span class="numero-capitulo">03</span>
         <div>
-          <small>CADA NUEVO DÍA</small>
-          <h3>Una historia que continúa</h3>
-          <p>Con momentos buenos, aprendizajes y nuevas ilusiones.</p>
+          <small>CADA NUEVA ETAPA</small>
+          <h3>Crecer y aprender</h3>
+          <p>Entender que una historia también se construye con paciencia y comprensión.</p>
         </div>
       </article>
 
-      <article>
-        <span class="punto">♡</span>
+      <article class="capitulo">
+        <span class="numero-capitulo">04</span>
         <div>
           <small>19 DE NOVIEMBRE DE 2026</small>
           <h3>Un año y seis meses</h3>
-          <p>Una fecha más para guardar en nuestro corazón.</p>
+          <p>Una fecha más para recordar todo lo que hemos vivido.</p>
         </div>
       </article>
     </div>
@@ -157,275 +214,418 @@
 
   <!-- GALERÍA -->
   <section class="seccion recuerdos" id="recuerdos">
-    <p class="sobrelinea">NUESTROS RECUERDOS</p>
-    <h2>Momentos que guardamos</h2>
-    <p class="descripcion">Cada fotografía cuenta una pequeña parte de nuestra historia.</p>
+    <div class="encabezado">
+      <span class="etiqueta">NUESTRO ÁLBUM</span>
+      <h2>Pequeños recuerdos, grandes sentimientos</h2>
+      <span class="ornamento">──── ♡ ────</span>
+      <p class="introduccion">
+        Toca cada fotografía para descubrir unas palabras
+        que guardan un pedacito de nuestra historia.
+      </p>
+    </div>
 
     <div class="galeria">
 
-      <button class="polaroid" data-foto="0">
-        <span class="corazon-tarjeta">♡</span>
-        <img src="/fotos/foto1.jpg.jpeg" alt="Recuerdo 1">
-        <span class="titulo-tarjeta">Un pedacito de felicidad</span>
-        <small>De esos momentos que no se olvidan ♡</small>
+      <button class="tarjeta" data-foto="0">
+        <div class="foto-tarjeta">
+          <img src="/fotos/foto1.jpg.jpeg" alt="Recuerdo uno">
+          <span>01</span>
+        </div>
+        <div class="texto-tarjeta">
+          <h3>Un pedacito de felicidad</h3>
+          <p>De esos momentos que se quedan en el corazón.</p>
+          <small>ABRIR RECUERDO ♡</small>
+        </div>
       </button>
 
-      <button class="polaroid" data-foto="1">
-        <span class="corazon-tarjeta">♡</span>
-        <img src="/fotos/foto2.jpg.jpeg" alt="Recuerdo 2">
-        <span class="titulo-tarjeta">Mi recuerdo favorito</span>
-        <small>Porque contigo todo es especial</small>
+      <button class="tarjeta" data-foto="1">
+        <div class="foto-tarjeta">
+          <img src="/fotos/foto2.jpg.jpeg" alt="Recuerdo dos">
+          <span>02</span>
+        </div>
+        <div class="texto-tarjeta">
+          <h3>Mi recuerdo favorito</h3>
+          <p>Porque hay instantes que merecen quedarse.</p>
+          <small>ABRIR RECUERDO ♡</small>
+        </div>
       </button>
 
-      <button class="polaroid" data-foto="2">
-        <span class="corazon-tarjeta">♡</span>
-        <img src="/fotos/foto3.jpg.jpeg" alt="Recuerdo 3">
-        <span class="titulo-tarjeta">Siempre nosotros</span>
-        <small>Una historia que sigue creciendo ♡</small>
+      <button class="tarjeta" data-foto="2">
+        <div class="foto-tarjeta">
+          <img src="/fotos/foto3.jpg.jpeg" alt="Recuerdo tres">
+          <span>03</span>
+        </div>
+        <div class="texto-tarjeta">
+          <h3>Siempre nosotros</h3>
+          <p>Una historia que continúa escribiéndose.</p>
+          <small>ABRIR RECUERDO ♡</small>
+        </div>
       </button>
 
-      <button class="polaroid" data-foto="3">
-        <span class="corazon-tarjeta">♡</span>
-        <img src="/fotos/foto4.jpg.jpeg" alt="Recuerdo 4">
-        <span class="titulo-tarjeta">Pequeños instantes</span>
-        <small>Que se convierten en grandes recuerdos</small>
+      <button class="tarjeta" data-foto="3">
+        <div class="foto-tarjeta">
+          <img src="/fotos/foto4.jpg.jpeg" alt="Recuerdo cuatro">
+          <span>04</span>
+        </div>
+        <div class="texto-tarjeta">
+          <h3>Pequeños instantes</h3>
+          <p>Los detalles también hacen recuerdos inolvidables.</p>
+          <small>ABRIR RECUERDO ♡</small>
+        </div>
       </button>
 
-      <button class="polaroid" data-foto="4">
-        <span class="corazon-tarjeta">♡</span>
-        <img src="/fotos/foto5.jpg.jpeg" alt="Recuerdo 5">
-        <span class="titulo-tarjeta">Mi lugar favorito</span>
-        <small>Donde el cariño se siente bonito ♡</small>
+      <button class="tarjeta" data-foto="4">
+        <div class="foto-tarjeta">
+          <img src="/fotos/foto5.jpg.jpeg" alt="Recuerdo cinco">
+          <span>05</span>
+        </div>
+        <div class="texto-tarjeta">
+          <h3>Mi lugar favorito</h3>
+          <p>Un recuerdo que tiene un significado especial.</p>
+          <small>ABRIR RECUERDO ♡</small>
+        </div>
       </button>
 
-      <button class="polaroid" data-foto="5">
-        <span class="corazon-tarjeta">♡</span>
-        <img src="/fotos/foto6.jpg.jpeg" alt="Recuerdo 6">
-        <span class="titulo-tarjeta">Lo bonito de coincidir</span>
-        <small>Entre tantas personas, nosotros</small>
+      <button class="tarjeta" data-foto="5">
+        <div class="foto-tarjeta">
+          <img src="/fotos/foto6.jpg.jpeg" alt="Recuerdo seis">
+          <span>06</span>
+        </div>
+        <div class="texto-tarjeta">
+          <h3>Lo bonito de coincidir</h3>
+          <p>Entre tantas personas, nuestros caminos se encontraron.</p>
+          <small>ABRIR RECUERDO ♡</small>
+        </div>
       </button>
 
-      <button class="polaroid" data-foto="6">
-        <span class="corazon-tarjeta">♡</span>
-        <img src="/fotos/foto7.jpg.jpeg" alt="Recuerdo 7">
-        <span class="titulo-tarjeta">Un recuerdo para siempre</span>
-        <small>Guardado con mucho cariño</small>
+      <button class="tarjeta" data-foto="6">
+        <div class="foto-tarjeta">
+          <img src="/fotos/foto7.jpg.jpeg" alt="Recuerdo siete">
+          <span>07</span>
+        </div>
+        <div class="texto-tarjeta">
+          <h3>Un recuerdo para siempre</h3>
+          <p>Un pedacito de nuestra historia guardado con cariño.</p>
+          <small>ABRIR RECUERDO ♡</small>
+        </div>
       </button>
 
-      <button class="polaroid" data-foto="7">
-        <span class="corazon-tarjeta">♡</span>
-        <img src="/fotos/foto8.jpg.jpeg" alt="Recuerdo 8">
-        <span class="titulo-tarjeta">Momentos nuestros</span>
-        <small>De esos que alegran el corazón</small>
+      <button class="tarjeta" data-foto="7">
+        <div class="foto-tarjeta">
+          <img src="/fotos/foto8.jpg.jpeg" alt="Recuerdo ocho">
+          <span>08</span>
+        </div>
+        <div class="texto-tarjeta">
+          <h3>Momentos nuestros</h3>
+          <p>Esos pequeños detalles que alegran los días.</p>
+          <small>ABRIR RECUERDO ♡</small>
+        </div>
       </button>
 
-      <button class="polaroid" data-foto="8">
-        <span class="corazon-tarjeta">♡</span>
-        <img src="/fotos/foto9.jpg.jpeg" alt="Recuerdo 9">
-        <span class="titulo-tarjeta">Y los que faltan</span>
-        <small>Porque todavía tenemos mucho por vivir ♡</small>
+      <button class="tarjeta" data-foto="8">
+        <div class="foto-tarjeta">
+          <img src="/fotos/foto9.jpg.jpeg" alt="Recuerdo nueve">
+          <span>09</span>
+        </div>
+        <div class="texto-tarjeta">
+          <h3>Y los que faltan</h3>
+          <p>Porque todavía quedan muchos momentos por vivir.</p>
+          <small>ABRIR RECUERDO ♡</small>
+        </div>
       </button>
 
     </div>
   </section>
 
-  <!-- FRASE FINAL -->
+  <!-- FRASE -->
   <section class="frase-final">
     <span>♡</span>
-    <h2>Lo nuestro es una historia que todavía tiene muchas páginas por escribir.</h2>
-    <p>Y qué bonito que podamos seguir construyéndola.</p>
+    <p class="etiqueta">UNA HISTORIA QUE CONTINÚA</p>
+    <h2>Lo bonito no es solamente recordar lo vivido, sino también valorar todo lo que todavía podemos construir.</h2>
+    <p>Que nunca nos falten motivos para crear nuevos recuerdos.</p>
   </section>
 
   <!-- CARTA -->
   <section class="seccion carta" id="carta">
-    <p class="sobrelinea">UNAS PALABRAS PARA TI</p>
-    <h2>Una carta para Marcelo</h2>
-    <p class="descripcion">Hay cosas que merecen ser dichas desde el corazón.</p>
+    <div class="encabezado">
+      <span class="etiqueta">UNAS PALABRAS PARA TI</span>
+      <h2>Una carta para Marcelo</h2>
+      <span class="ornamento">──── ♡ ────</span>
+      <p class="introduccion">
+        Hay sentimientos que merecen tener su propio espacio.
+      </p>
+    </div>
 
-    <button id="abrirCarta" class="boton">ABRIR MI CARTA ♡</button>
+    <div class="sobre">
+      <div class="sello">♡</div>
+      <p>Una pequeña sorpresa para ti</p>
+      <button id="abrirCarta" class="boton boton-carta">ABRIR MI CARTA</button>
+    </div>
 
     <div id="contenidoCarta" class="contenido-carta" hidden>
-      <p>Mi amor:</p>
+      <p class="saludo-carta">Mi amor:</p>
 
       <p>
-        Hoy quiero regalarte algo diferente, algo que puedas guardar y volver
-        a mirar cuando quieras recordar esta parte de nuestra historia.
+        Hoy quiero regalarte algo diferente, algo que puedas guardar
+        y volver a mirar cuando quieras recordar esta parte de nuestra historia.
       </p>
 
       <p>
-        Gracias por cada conversación, por los momentos compartidos y por
-        todo lo que hemos aprendido durante este tiempo. Sé que no somos
-        perfectos y que también hemos tenido días difíciles, pero cada
-        experiencia nos ha enseñado algo.
+        Gracias por cada conversación, por los momentos compartidos
+        y por todo lo que hemos aprendido durante este tiempo.
+        Sé que no somos perfectos y que también hemos tenido días difíciles,
+        pero cada experiencia nos ha enseñado algo.
       </p>
 
       <p>
-        Quiero que nunca olvidemos lo bonito que ha sido encontrarnos y todo
-        lo que hemos construido desde aquel 19 de mayo. Deseo que sigamos
-        sumando recuerdos, cumpliendo sueños y aprendiendo a cuidarnos
-        cada día un poquito mejor.
+        Quiero que nunca olvidemos lo bonito que ha sido encontrarnos
+        y todo lo que hemos construido desde aquel 19 de mayo.
+        Deseo que sigamos sumando recuerdos, cumpliendo sueños y
+        aprendiendo a cuidarnos cada día un poquito mejor.
       </p>
 
       <p>
-        Este pequeño espacio guarda una parte de nosotros y de todo el cariño
+        Esta página guarda fotografías, canciones y palabras,
+        pero sobre todo representa una pequeña parte del cariño
         que quiero expresarte.
       </p>
 
-      <p class="firma">Con mucho cariño, Verónica ♡</p>
+      <p class="firma-carta">Con mucho cariño,<br>Verónica ♡</p>
     </div>
   </section>
 
-  <footer>
-    <div class="corazon-footer">♡</div>
-    <p>Marcelo Javier & Verónica Castillo</p>
-    <small>Desde el 19 de mayo de 2025 · Nuestro pequeño infinito</small>
-    <small class="hecho">Hecho con amor ♡</small>
-  </footer>
-
 </main>
 
-<!-- VISOR DE FOTOGRAFÍAS -->
-<div class="visor" id="visor" aria-hidden="true">
-  <button class="cerrar" id="cerrarVisor" aria-label="Cerrar">×</button>
-  <button class="flecha anterior" id="fotoAnterior" aria-label="Foto anterior">‹</button>
+<footer>
+  <div class="corazon-footer">♡</div>
+  <p>Marcelo Javier & Verónica Castillo</p>
+  <small>Desde el 19 de mayo de 2025</small>
+  <small>Hecho con mucho cariño ♡</small>
+  <a href="#inicio" class="volver">VOLVER AL INICIO ↑</a>
+</footer>
 
-  <div class="visor-contenido">
-    <img id="fotoAmpliada" src="/fotos/foto1.jpg.jpeg" alt="Fotografía ampliada">
-    <p id="mensajeFoto">Un recuerdo bonito ♡</p>
-    <small id="contadorFoto">1 / 9</small>
+<!-- VENTANA DE RECUERDOS -->
+<div class="modal" id="modalRecuerdo" aria-hidden="true">
+  <div class="modal-contenido">
+    <button class="cerrar-modal" id="cerrarModal" aria-label="Cerrar">×</button>
+    <div class="modal-imagen">
+      <img id="modalImagen" src="/fotos/foto1.jpg.jpeg" alt="Recuerdo ampliado">
+    </div>
+    <div class="modal-texto">
+      <span class="etiqueta">UN RECUERDO NUESTRO</span>
+      <h2 id="modalTitulo">Un pedacito de felicidad</h2>
+      <div class="ornamento">──── ♡ ────</div>
+      <p id="modalMensaje"></p>
+      <span class="modal-corazon">♡</span>
+    </div>
   </div>
-
-  <button class="flecha siguiente" id="fotoSiguiente" aria-label="Foto siguiente">›</button>
 </div>
 
 <script is:inline>
-  // FECHAS
+  // MENÚ PARA CELULARES
+  const menuToggle = document.getElementById("menuToggle");
+  const menu = document.getElementById("menu");
+
+  menuToggle.addEventListener("click", () => {
+    menu.classList.toggle("menu-abierto");
+  });
+
+  menu.querySelectorAll("a").forEach((enlace) => {
+    enlace.addEventListener("click", () => {
+      menu.classList.remove("menu-abierto");
+    });
+  });
+
+  // CONTADOR DE TIEMPO
   const inicio = new Date("2025-05-19T00:00:00-05:00").getTime();
   const aniversario = new Date("2026-11-19T00:00:00-05:00").getTime();
 
   const obtener = (id) => document.getElementById(id);
 
-  // CONTADORES
   function actualizarContadores() {
     const ahora = Date.now();
     const transcurrido = Math.max(0, ahora - inicio);
-
-    obtener("dias").textContent = String(Math.floor(transcurrido / 86400000));
-    obtener("horas").textContent = String(Math.floor((transcurrido % 86400000) / 3600000)).padStart(2, "0");
-    obtener("minutos").textContent = String(Math.floor((transcurrido % 3600000) / 60000)).padStart(2, "0");
-    obtener("segundos").textContent = String(Math.floor((transcurrido % 60000) / 1000)).padStart(2, "0");
-
     const restante = Math.max(0, aniversario - ahora);
 
-    obtener("cdias").textContent = String(Math.floor(restante / 86400000));
-    obtener("choras").textContent = String(Math.floor((restante % 86400000) / 3600000)).padStart(2, "0");
-    obtener("cminutos").textContent = String(Math.floor((restante % 3600000) / 60000)).padStart(2, "0");
-    obtener("csegundos").textContent = String(Math.floor((restante % 60000) / 1000)).padStart(2, "0");
+    obtener("dias").textContent = Math.floor(transcurrido / 86400000);
+    obtener("horas").textContent = String(
+      Math.floor((transcurrido % 86400000) / 3600000)
+    ).padStart(2, "0");
 
-    obtener("mensajeCuenta").textContent = restante === 0
-      ? "¡Feliz aniversario! ♡"
-      : "Cada segundo nos acerca a un nuevo recuerdo.";
+    obtener("minutos").textContent = String(
+      Math.floor((transcurrido % 3600000) / 60000)
+    ).padStart(2, "0");
+
+    obtener("segundos").textContent = String(
+      Math.floor((transcurrido % 60000) / 1000)
+    ).padStart(2, "0");
+
+    obtener("cdias").textContent = Math.floor(restante / 86400000);
+    obtener("choras").textContent = String(
+      Math.floor((restante % 86400000) / 3600000)
+    ).padStart(2, "0");
+
+    obtener("cminutos").textContent = String(
+      Math.floor((restante % 3600000) / 60000)
+    ).padStart(2, "0");
+
+    obtener("csegundos").textContent = String(
+      Math.floor((restante % 60000) / 1000)
+    ).padStart(2, "0");
+
+    obtener("mensajeCuenta").textContent =
+      restante === 0
+        ? "Una fecha especial para recordar ♡"
+        : "Cada segundo es una nueva oportunidad para crear recuerdos.";
   }
 
-  // CARTA
-  obtener("abrirCarta").addEventListener("click", () => {
-    const carta = obtener("contenidoCarta");
-    carta.hidden = !carta.hidden;
+  actualizarContadores();
+  setInterval(actualizarContadores, 1000);
 
-    obtener("abrirCarta").textContent = carta.hidden
-      ? "ABRIR MI CARTA ♡"
-      : "CERRAR MI CARTA ♡";
+  // REPRODUCTOR DE SPOTIFY
+  const reproductor = obtener("spotifyPlayer");
+  const botonMusica = obtener("iniciarMusica");
+
+  const urlSpotify =
+    "https://open.spotify.com/embed/playlist/7wLdnNferEN3IH6IMJgMMw?utm_source=generator&theme=0";
+
+  botonMusica.addEventListener("click", () => {
+    reproductor.src = urlSpotify + "&autoplay=1";
+    botonMusica.textContent = "NUESTRA MÚSICA ♡";
   });
 
-  // GALERÍA
-  const fotos = [
-    "/fotos/foto1.jpg.jpeg",
-    "/fotos/foto2.jpg.jpeg",
-    "/fotos/foto3.jpg.jpeg",
-    "/fotos/foto4.jpg.jpeg",
-    "/fotos/foto5.jpg.jpeg",
-    "/fotos/foto6.jpg.jpeg",
-    "/fotos/foto7.jpg.jpeg",
-    "/fotos/foto8.jpg.jpeg",
-    "/fotos/foto9.jpg.jpeg"
+  // INTENTO DE AUTOPLAY
+  // Spotify y el navegador pueden impedir el sonido automático.
+  window.addEventListener("load", () => {
+    reproductor.src = urlSpotify + "&autoplay=1";
+  });
+
+  // CARTA
+  const botonCarta = obtener("abrirCarta");
+  const contenidoCarta = obtener("contenidoCarta");
+
+  botonCarta.addEventListener("click", () => {
+    contenidoCarta.hidden = !contenidoCarta.hidden;
+
+    botonCarta.textContent = contenidoCarta.hidden
+      ? "ABRIR MI CARTA"
+      : "CERRAR MI CARTA";
+
+    if (!contenidoCarta.hidden) {
+      contenidoCarta.scrollIntoView({
+        behavior: "smooth",
+        block: "center"
+      });
+    }
+  });
+
+  // RECUERDOS Y MENSAJES
+  const recuerdos = [
+    {
+      foto: "/fotos/foto1.jpg.jpeg",
+      titulo: "Un pedacito de felicidad",
+      mensaje: "Hay momentos que parecen pequeños cuando suceden, pero que con el tiempo se convierten en recuerdos muy especiales. Esta fotografía guarda uno de esos pedacitos de nuestra historia. Me gusta pensar que, entre tantas cosas que pasan en la vida, también tenemos instantes que merecen quedarse para siempre en nuestra memoria. Gracias por formar parte de este recuerdo y de todo lo bonito que hemos compartido."
+    },
+    {
+      foto: "/fotos/foto2.jpg.jpeg",
+      titulo: "Mi recuerdo favorito",
+      mensaje: "Cada fotografía tiene algo que contar y esta es una de esas que quiero conservar con mucho cariño. Me recuerda que no hacen falta grandes acontecimientos para tener momentos importantes. A veces basta una imagen, una conversación o un instante compartido para encontrar una razón para sonreír. Ojalá nunca dejemos de valorar esos pequeños detalles que hacen especial nuestra historia."
+    },
+    {
+      foto: "/fotos/foto3.jpg.jpeg",
+      titulo: "Siempre nosotros",
+      mensaje: "Nuestra historia está formada por diferentes etapas, por días tranquilos, por aprendizajes y por momentos que nos han enseñado a conocernos mejor. No todo tiene que ser perfecto para tener valor. Lo importante es recordar lo que hemos vivido, aprender de cada experiencia y tratar de construir momentos cada vez más bonitos. Esta fotografía es una pequeña parte de ese camino."
+    },
+    {
+      foto: "/fotos/foto4.jpg.jpeg",
+      titulo: "Pequeños instantes",
+      mensaje: "A veces los momentos más sencillos terminan siendo los que más recordamos. Una fotografía puede guardar sentimientos, detalles y recuerdos que las palabras no siempre consiguen explicar. Por eso quise darle un espacio aquí. Para que podamos volver a verla y recordar que nuestra historia también está hecha de esos instantes cotidianos que merecen ser apreciados."
+    },
+    {
+      foto: "/fotos/foto5.jpg.jpeg",
+      titulo: "Mi lugar favorito",
+      mensaje: "No siempre se necesita un lugar extraordinario para guardar un recuerdo bonito. Lo especial muchas veces está en las personas, en las experiencias y en lo que sentimos al recordar un momento. Esta imagen forma parte de ese pequeño álbum que reúne una parte de nosotros. Quiero que cuando la mires recuerdes que cada detalle de nuestra historia tiene un significado."
+    },
+    {
+      foto: "/fotos/foto6.jpg.jpeg",
+      titulo: "Lo bonito de coincidir",
+      mensaje: "Entre tantas personas, tantos caminos y tantas historias, nuestras vidas llegaron a encontrarse. Y aunque no podemos saber todo lo que nos espera, sí podemos valorar lo que hemos vivido hasta ahora. Esta fotografía es un recordatorio de esa coincidencia y de los momentos que hemos podido compartir. Qué bonito es tener recuerdos que nos permitan volver a esos días."
+    },
+    {
+      foto: "/fotos/foto7.jpg.jpeg",
+      titulo: "Un recuerdo para siempre",
+      mensaje: "Hay recuerdos que no necesitan demasiadas explicaciones porque su valor está en lo que representan para nosotros. Esta fotografía es una pequeña parte de nuestra historia y quiero conservarla como algo especial. Que nunca nos falten motivos para mirar atrás con cariño, reconocer cuánto hemos aprendido y seguir creando nuevos momentos que algún día también podamos recordar."
+    },
+    {
+      foto: "/fotos/foto8.jpg.jpeg",
+      titulo: "Momentos nuestros",
+      mensaje: "Cada etapa deja algo diferente: una enseñanza, una sonrisa, una conversación o una experiencia que se queda guardada en la memoria. Me gusta pensar que todas esas pequeñas cosas forman el álbum de nuestra historia. Esta imagen tiene su propio espacio porque también merece ser recordada. Gracias por cada momento compartido y por todo lo que todavía podemos aprender."
+    },
+    {
+      foto: "/fotos/foto9.jpg.jpeg",
+      titulo: "Y los que faltan",
+      mensaje: "Este álbum tiene nueve fotografías, pero nuestra historia no termina aquí. Todavía quedan fechas por celebrar, canciones por escuchar, conversaciones por compartir y muchos recuerdos que podemos crear. Quise dejar este último espacio como una manera de mirar hacia adelante con ilusión. Que podamos seguir escribiendo nuestra historia con cariño, respeto, paciencia y muchas razones para sonreír."
+    }
   ];
 
-  const frasesFotos = [
-    "Un pedacito de felicidad ♡",
-    "Mi recuerdo favorito",
-    "Siempre nosotros",
-    "Pequeños instantes",
-    "Mi lugar favorito",
-    "Lo bonito de coincidir",
-    "Un recuerdo para siempre",
-    "Momentos nuestros",
-    "Y los que faltan ♡"
-  ];
+  // ABRIR LAS TARJETAS
+  const modal = obtener("modalRecuerdo");
 
-  let fotoActual = 0;
-  const visor = obtener("visor");
+  function abrirRecuerdo(indice) {
+    const recuerdo = recuerdos[indice];
 
-  function mostrarFoto(indice) {
-    fotoActual = (indice + fotos.length) % fotos.length;
-    obtener("fotoAmpliada").src = fotos[fotoActual];
-    obtener("mensajeFoto").textContent = frasesFotos[fotoActual];
-    obtener("contadorFoto").textContent = `${fotoActual + 1} / ${fotos.length}`;
+    obtener("modalImagen").src = recuerdo.foto;
+    obtener("modalTitulo").textContent = recuerdo.titulo;
+    obtener("modalMensaje").textContent = recuerdo.mensaje;
+
+    modal.classList.add("modal-abierto");
+    modal.setAttribute("aria-hidden", "false");
+    document.body.classList.add("sin-scroll");
   }
 
-  document.querySelectorAll(".polaroid").forEach((tarjeta) => {
+  function cerrarRecuerdo() {
+    modal.classList.remove("modal-abierto");
+    modal.setAttribute("aria-hidden", "true");
+    document.body.classList.remove("sin-scroll");
+  }
+
+  document.querySelectorAll(".tarjeta").forEach((tarjeta) => {
     tarjeta.addEventListener("click", () => {
-      const indice = Number(tarjeta.getAttribute("data-foto"));
-      mostrarFoto(indice);
-      visor.classList.add("activo");
-      visor.setAttribute("aria-hidden", "false");
+      abrirRecuerdo(Number(tarjeta.dataset.foto));
     });
   });
 
-  function cerrarVisor() {
-    visor.classList.remove("activo");
-    visor.setAttribute("aria-hidden", "true");
-  }
+  obtener("cerrarModal").addEventListener("click", cerrarRecuerdo);
 
-  obtener("cerrarVisor").addEventListener("click", cerrarVisor);
-  obtener("fotoAnterior").addEventListener("click", () => mostrarFoto(fotoActual - 1));
-  obtener("fotoSiguiente").addEventListener("click", () => mostrarFoto(fotoActual + 1));
-
-  visor.addEventListener("click", (evento) => {
-    if (evento.target === visor) cerrarVisor();
+  modal.addEventListener("click", (evento) => {
+    if (evento.target === modal) cerrarRecuerdo();
   });
 
   document.addEventListener("keydown", (evento) => {
-    if (evento.key === "Escape") cerrarVisor();
-
-    if (visor.classList.contains("activo") && evento.key === "ArrowRight") {
-      mostrarFoto(fotoActual + 1);
-    }
-
-    if (visor.classList.contains("activo") && evento.key === "ArrowLeft") {
-      mostrarFoto(fotoActual - 1);
+    if (evento.key === "Escape") {
+      cerrarRecuerdo();
     }
   });
-
-  // INICIAR CONTADORES
-  actualizarContadores();
-  setInterval(actualizarContadores, 1000);
 </script>
 
 <style>
   :root {
-    --fondo: #28121d;
-    --vino: #431c30;
+    --fondo: #29151f;
+    --vino: #482638;
+    --vino-claro: #603449;
     --dorado: #d8b77e;
-    --rosa: #d6a6b4;
+    --rosa: #d7aab8;
     --crema: #f6eee8;
-    --texto: #f5e8e8;
+    --texto: #f6e9e8;
   }
 
-  * { box-sizing: border-box; }
+  * {
+    box-sizing: border-box;
+  }
 
   html {
     scroll-behavior: smooth;
-    scroll-padding-top: 85px;
+    scroll-padding-top: 90px;
   }
 
   body {
@@ -433,7 +633,15 @@
     background: var(--fondo);
     color: var(--texto);
     font-family: "Montserrat", sans-serif;
-    font-size: 14px;
+    overflow-x: hidden;
+  }
+
+  body.sin-scroll {
+    overflow: hidden;
+  }
+
+  h1, h2, h3, p {
+    overflow-wrap: break-word;
   }
 
   h1, h2, h3 {
@@ -442,71 +650,142 @@
   }
 
   h2 {
-    font-size: clamp(2.2rem, 5vw, 3.3rem);
-    margin: 10px 0 18px;
+    font-size: clamp(36px, 5vw, 55px);
+    line-height: 1.1;
+    margin: 14px 0;
   }
 
-  p { line-height: 1.8; }
+  p {
+    line-height: 1.85;
+  }
 
-  nav {
+  button, a {
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  /* NAVEGACIÓN */
+  .navegacion {
     position: sticky;
     top: 0;
-    z-index: 20;
-    background: #28121df2;
-    border-bottom: 1px solid #d8b77e30;
-    min-height: 68px;
+    z-index: 50;
+    min-height: 72px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 12px 7%;
     gap: 20px;
-    backdrop-filter: blur(12px);
+    padding: 12px 7%;
+    background: #29151ff5;
+    border-bottom: 1px solid #d8b77e35;
+    backdrop-filter: blur(14px);
   }
 
-  .logo {
+  .marca {
     color: var(--crema);
-    font-family: "Cormorant Garamond", serif;
-    font-size: 22px;
     text-decoration: none;
+    font: 25px "Cormorant Garamond", serif;
+    white-space: nowrap;
   }
 
-  .logo span { color: var(--dorado); }
+  .marca span {
+    color: var(--dorado);
+  }
 
-  .enlaces {
+  .menu {
     display: flex;
+    align-items: center;
     gap: 25px;
   }
 
-  .enlaces a {
-    color: #e8d9dd;
-    text-decoration: none;
+  .menu a {
+    color: #e9d9df;
     font-size: 10px;
     letter-spacing: 1px;
-    transition: .3s;
+    text-decoration: none;
+    transition: color .3s;
   }
 
-  .enlaces a:hover { color: var(--dorado); }
+  .menu a:hover {
+    color: var(--dorado);
+  }
+
+  .menu-toggle {
+    display: none;
+    background: none;
+    color: var(--crema);
+    border: 1px solid #d8b77e66;
+    font-size: 22px;
+    padding: 5px 11px;
+    cursor: pointer;
+  }
 
   /* PORTADA */
   .portada {
-    min-height: 650px;
-    padding: 110px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background:
-      linear-gradient(#28121dbb, #28121de8),
-      radial-gradient(ellipse at center, #754056, #28121d 75%);
+    min-height: 700px;
+    padding: 80px 20px;
+    display: grid;
+    place-items: center;
     position: relative;
     overflow: hidden;
+    background:
+      radial-gradient(ellipse at 50% 40%, #72465a 0%, #462638 38%, #29151f 78%);
+  }
+
+  .portada::before,
+  .portada::after {
+    content: "";
+    position: absolute;
+    width: 320px;
+    height: 320px;
+    border: 1px solid #d8b77e30;
+    border-radius: 50%;
+  }
+
+  .portada::before {
+    top: -150px;
+    left: -130px;
+  }
+
+  .portada::after {
+    bottom: -170px;
+    right: -130px;
+  }
+
+  .portada-marco {
+    max-width: 780px;
+    width: 100%;
+    padding: 65px 25px;
+    text-align: center;
+    border: 1px solid #d8b77e85;
+    outline: 1px solid #d8b77e40;
+    outline-offset: 9px;
+    position: relative;
+    z-index: 2;
+  }
+
+  .etiqueta-portada,
+  .etiqueta {
+    color: var(--dorado);
+    font-size: 9px;
+    font-weight: 600;
+    letter-spacing: 3px;
+  }
+
+  .corazon-portada {
+    font-size: 55px;
+    color: var(--rosa);
+    margin: 20px 0 5px;
+  }
+
+  .fecha-portada {
+    color: var(--dorado);
+    letter-spacing: 4px;
+    font-size: 11px;
   }
 
   .portada h1 {
-    font-size: clamp(2.8rem, 7vw, 5.6rem);
-    line-height: 1.05;
-    margin: 22px 0;
+    font-size: clamp(55px, 9vw, 100px);
+    line-height: .95;
+    margin: 25px 0;
   }
 
   .portada h1 em {
@@ -514,80 +793,89 @@
     font-weight: 400;
   }
 
-  .sobrelinea {
-    color: var(--dorado);
-    font-size: 9px;
-    letter-spacing: 3px;
-    font-weight: 600;
+  .linea-dorada {
+    width: 80px;
+    height: 1px;
+    background: var(--dorado);
+    margin: 30px auto;
   }
 
-  .subtitulo {
-    max-width: 520px;
-    color: #e6d2d9;
+  .frase-portada {
+    color: #ead9df;
+    font-size: 13px;
   }
 
   .nombres-portada {
-    font-family: "Parisienne", cursive;
-    font-size: 32px;
+    font: 36px "Parisienne", cursive;
+    color: var(--crema);
+    margin: 28px 0;
   }
 
-  .nombres-portada span { color: var(--dorado); }
-  .destellos { color: var(--dorado); font-size: 23px; }
-  .flor { color: var(--rosa); font-size: 45px; margin-top: 45px; }
+  .nombres-portada span {
+    color: var(--dorado);
+  }
 
   .boton {
     display: inline-block;
-    padding: 15px 25px;
-    border: 1px solid var(--dorado);
-    background: transparent;
     color: var(--crema);
     text-decoration: none;
-    font: 500 10px "Montserrat", sans-serif;
+    border: 1px solid var(--dorado);
+    padding: 15px 24px;
+    font-size: 9px;
     letter-spacing: 2px;
-    cursor: pointer;
     transition: .3s;
   }
 
   .boton:hover {
     background: var(--dorado);
     color: var(--fondo);
-    transform: translateY(-3px);
+  }
+
+  .decoracion {
+    position: absolute;
+    color: #d8b77e85;
+    font-size: 55px;
+  }
+
+  .decoracion-uno {
+    top: 15%;
+    left: 10%;
+  }
+
+  .decoracion-dos {
+    bottom: 18%;
+    right: 12%;
+  }
+
+  .decoracion-tres {
+    top: 25%;
+    right: 15%;
+    font-size: 35px;
   }
 
   /* SECCIONES */
   .seccion {
-    padding: 100px 8%;
+    padding: 105px 8%;
+  }
+
+  .encabezado {
     text-align: center;
+    max-width: 760px;
+    margin: 0 auto 55px;
   }
 
-  /* MÚSICA */
-  .musica { background: #321724; }
-
-  .musica p:not(.sobrelinea),
-  .descripcion {
-    color: #d8c4cb;
-  }
-
-  .spotify {
-    max-width: 650px;
-    width: 100%;
-    margin: 35px auto 0;
-    overflow: hidden;
-    border-radius: 14px;
-    box-shadow: 0 12px 35px #0004;
-  }
-
-  .spotify iframe {
+  .ornamento {
     display: block;
-    border: 0;
+    color: var(--dorado);
+    margin: 22px 0;
+    letter-spacing: 4px;
   }
 
-  .dedicatoria-musica {
-    color: var(--rosa) !important;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 21px;
-    font-style: italic;
-    margin-top: 25px;
+  .introduccion {
+    max-width: 550px;
+    margin: 15px auto 0;
+    color: #d7c4cc;
+    font-size: 13px;
   }
 
   /* HISTORIA */
@@ -596,62 +884,196 @@
     color: var(--vino);
   }
 
-  .historia .sobrelinea,
-  .linea-tiempo .sobrelinea,
-  .carta .sobrelinea {
+  .historia .etiqueta {
     color: #987044;
   }
 
-  .adorno {
+  .historia .ornamento {
     color: #ad8050;
-    margin: 20px;
   }
 
-  .texto-historia {
-    max-width: 740px;
-    margin: 25px auto;
+  .historia-contenido {
+    max-width: 1050px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 65px;
+  }
+
+  .historia-imagen {
+    position: relative;
+    padding: 12px;
+    border: 1px solid #c5a273;
+    background: #fffaf5;
+    box-shadow: 0 15px 35px #38212b20;
+  }
+
+  .historia-imagen img {
+    display: block;
+    width: 100%;
+    height: 420px;
+    object-fit: cover;
+  }
+
+  .historia-imagen span {
+    display: block;
+    color: var(--vino);
+    font: 23px "Parisienne", cursive;
+    text-align: center;
+    padding: 14px;
+  }
+
+  .historia-texto {
+    font-size: 13px;
     line-height: 2;
-    font-size: 15px;
+    color: #654b57;
   }
 
-  blockquote {
+  .historia-texto p {
+    margin: 12px 0 20px;
+  }
+
+  .letra-grande {
+    float: left;
+    font: 80px "Cormorant Garamond", serif;
+    color: #a96c84;
+    line-height: .8;
+    padding: 8px 10px 0 0;
+  }
+
+  .firma-pequena {
+    font: 26px "Parisienne", cursive;
+    text-align: right;
+    color: #9d5c77;
+    margin-top: 30px;
+  }
+
+  /* MÚSICA */
+  .musica {
+    background: linear-gradient(145deg, #3b202e, #29151f);
+  }
+
+  .musica-contenedor {
     max-width: 650px;
-    margin: 40px auto 0;
-    padding: 20px;
-    border-top: 1px solid #c6a77c;
-    border-bottom: 1px solid #c6a77c;
-    font: italic 24px "Cormorant Garamond", serif;
+    margin: auto;
+    text-align: center;
+    padding: 40px;
+    background: #ffffff08;
+    border: 1px solid #d8b77e65;
+    box-shadow: 0 20px 50px #0002;
   }
 
-  /* CONTADOR */
+  .disco {
+    width: 75px;
+    height: 75px;
+    margin: 0 auto 20px;
+    border: 1px solid var(--dorado);
+    border-radius: 50%;
+    display: grid;
+    place-items: center;
+    font-size: 32px;
+    color: var(--dorado);
+    box-shadow: 0 0 0 8px #d8b77e12, 0 0 0 16px #d8b77e08;
+  }
+
+  .musica-titulo {
+    font: 32px "Cormorant Garamond", serif;
+    margin: 12px 0 0;
+  }
+
+  .musica-subtitulo {
+    color: var(--rosa);
+    font: 23px "Parisienne", cursive;
+    margin: 4px 0 25px;
+  }
+
+  .musica-contenedor iframe {
+    display: block;
+    width: 100%;
+    border: 0;
+    border-radius: 12px;
+  }
+
+  .boton-musica {
+    margin-top: 22px;
+    padding: 14px 22px;
+    border: 1px solid var(--dorado);
+    color: var(--crema);
+    background: transparent;
+    font-family: "Montserrat", sans-serif;
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    cursor: pointer;
+    transition: .3s;
+  }
+
+  .boton-musica:hover {
+    background: var(--dorado);
+    color: var(--fondo);
+  }
+
+  .nota-musica {
+    color: #cdb8c1;
+    font-size: 10px;
+    margin-top: 18px;
+  }
+
+  /* TIEMPO */
   .tiempo {
-    background: linear-gradient(140deg, #351725, #54283d);
+    background: #f2e8e1;
+    color: var(--vino);
+  }
+
+  .tiempo .etiqueta {
+    color: #987044;
+  }
+
+  .tiempo .ornamento {
+    color: #a98055;
+  }
+
+  .tiempo .introduccion {
+    color: #755d67;
+  }
+
+  .contador-marco {
+    max-width: 850px;
+    margin: auto;
+    text-align: center;
+    border: 1px solid #c7a77c;
+    padding: 45px 25px;
+    background: #fffaf6;
+    box-shadow: 0 12px 35px #3d243015;
+  }
+
+  .contador-titulo {
+    color: #987044;
+    font-size: 10px;
+    letter-spacing: 2px;
   }
 
   .contador {
     display: flex;
     justify-content: center;
-    gap: 14px;
     flex-wrap: wrap;
-    margin: 35px 0 25px;
+    gap: 15px;
+    margin: 30px 0;
   }
 
   .contador div {
-    min-width: 100px;
-    padding: 20px 10px;
-    border: 1px solid #d8b77e66;
-    background: #ffffff08;
-    border-radius: 5px;
+    min-width: 115px;
+    padding: 20px 12px;
+    background: #482638;
+    color: var(--crema);
     display: flex;
     flex-direction: column;
-    gap: 7px;
+    gap: 8px;
   }
 
   .contador strong {
+    font: 48px "Cormorant Garamond", serif;
     color: var(--dorado);
-    font-size: 38px;
-    font-family: "Cormorant Garamond", serif;
-    font-weight: 600;
   }
 
   .contador span {
@@ -659,289 +1081,445 @@
     letter-spacing: 2px;
   }
 
-  .fecha-especial { color: var(--rosa); }
+  .contador-pie {
+    color: #916d7c;
+    font: 23px "Parisienne", cursive;
+  }
 
-  .proximo {
+  .proximo-aniversario {
     max-width: 650px;
-    margin: 65px auto 0;
+    margin: 55px auto 0;
     padding: 35px 20px;
-    border: 1px solid #d8b77e66;
+    text-align: center;
+    border: 1px solid #c7a77c;
   }
 
-  .proximo h3 {
-    font-size: 30px;
-    margin: 10px;
+  .proximo-aniversario .etiqueta {
+    color: #987044;
   }
 
-  .mensaje-cuenta { color: var(--rosa); }
+  .proximo-aniversario h3 {
+    font-size: 35px;
+    margin: 15px 0 5px;
+  }
 
-  /* LÍNEA DEL TIEMPO */
-  .linea-tiempo {
-    background: #f1e5df;
+  .proximo-aniversario > p {
+    color: #806675;
+    font-size: 12px;
+  }
+
+  .contador-pequeno div {
+    background: #fffaf6;
+    border: 1px solid #c7a77c;
     color: var(--vino);
+    min-width: 95px;
   }
 
-  .timeline {
-    max-width: 650px;
-    margin: 50px auto 0;
-    text-align: left;
-    border-left: 1px solid #b78e68;
-    padding-left: 30px;
+  .contador-pequeno strong {
+    color: #79435b;
+    font-size: 37px;
   }
 
-  .timeline article {
+  .contador-pequeno span {
+    color: #8a6878;
+  }
+
+  .mensaje-cuenta {
+    color: #946078 !important;
+  }
+
+  /* CAPÍTULOS */
+  .capitulos {
+    background: #34202b;
+  }
+
+  .capitulos-lista {
+    max-width: 750px;
+    margin: auto;
+    border-left: 1px solid #c7a77c;
+    padding-left: 35px;
+  }
+
+  .capitulo {
     position: relative;
-    padding-bottom: 35px;
-  }
-
-  .timeline article:last-child { padding-bottom: 0; }
-
-  .punto {
-    position: absolute;
-    left: -40px;
-    top: 0;
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    background: var(--vino);
-    color: var(--dorado);
-    text-align: center;
-    line-height: 20px;
-  }
-
-  .timeline small {
-    color: #9a754d;
-    letter-spacing: 1px;
-  }
-
-  .timeline h3 {
-    font-size: 25px;
-    margin: 6px 0;
-  }
-
-  .timeline p {
-    margin-top: 0;
-    color: #765d66;
-  }
-
-  /* GALERÍA Y TARJETAS */
-  .recuerdos { background: #28121d; }
-
-  .galeria {
-    display: grid;
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: 28px;
-    max-width: 1050px;
-    margin: 50px auto 0;
-  }
-
-  .polaroid {
-    position: relative;
+    padding: 0 0 35px 15px;
     display: flex;
-    flex-direction: column;
-    align-items: center;
-    background: #fff8f3;
-    border: 1px solid #d8b77e;
-    padding: 12px 12px 20px;
-    border-radius: 6px;
-    cursor: pointer;
-    box-shadow: 0 10px 25px #0004;
-    transition: transform .35s ease, box-shadow .35s ease;
-    color: #54283d;
-    text-align: center;
-    width: 100%;
-    min-width: 0;
-    font-family: "Montserrat", sans-serif;
+    gap: 20px;
   }
 
-  .polaroid:hover {
-    transform: translateY(-8px) rotate(-1deg);
-    box-shadow: 0 18px 30px #0005;
+  .capitulo:last-child {
+    padding-bottom: 0;
   }
 
-  .polaroid img {
-    display: block;
-    width: 100%;
-    height: 250px;
-    object-fit: cover;
-    background: #d8c3c9;
-    border-radius: 3px;
-  }
-
-  .corazon-tarjeta {
+  .numero-capitulo {
     position: absolute;
-    top: 15px;
-    right: 19px;
-    z-index: 2;
-    color: #b87991;
-    font-size: 21px;
-    text-shadow: 0 1px 4px #fff;
+    left: -53px;
+    top: 0;
+    width: 35px;
+    height: 35px;
+    display: grid;
+    place-items: center;
+    background: var(--dorado);
+    color: var(--fondo);
+    border-radius: 50%;
+    font: 16px "Cormorant Garamond", serif;
   }
 
-  .polaroid .titulo-tarjeta {
-    display: block;
-    width: 100%;
-    padding-top: 17px;
-    font-family: "Cormorant Garamond", serif;
-    font-size: 25px;
-    font-weight: 600;
-    color: #6c304b;
-    line-height: 1.2;
-  }
-
-  .polaroid small {
-    display: block;
-    width: 100%;
-    margin-top: 9px;
-    font-family: "Montserrat", sans-serif;
-    font-size: 10px;
-    font-weight: 400;
-    line-height: 1.6;
-    color: #765866;
-    letter-spacing: .2px;
-  }
-
-  /* FRASE FINAL */
-  .frase-final {
-    text-align: center;
-    padding: 100px 20px;
-    background: #4b2438;
-  }
-
-  .frase-final span {
+  .capitulo small {
     color: var(--dorado);
-    font-size: 45px;
+    font-size: 9px;
+    letter-spacing: 1.5px;
   }
 
-  .frase-final h2 {
-    max-width: 700px;
-    margin: 20px auto;
+  .capitulo h3 {
+    font-size: 27px;
+    margin: 5px 0;
   }
 
-  .frase-final p { color: var(--rosa); }
+  .capitulo p {
+    color: #d3c0c9;
+    font-size: 12px;
+    margin: 0;
+  }
 
-  /* CARTA */
-  .carta {
+  /* RECUERDOS */
+  .recuerdos {
     background: var(--crema);
     color: var(--vino);
   }
 
-  .contenido-carta {
-    max-width: 700px;
-    margin: 40px auto 0;
-    padding: 40px;
-    background: #fffaf5;
-    border: 1px solid #d8b77e;
-    box-shadow: 0 10px 30px #3b1b2b16;
-    text-align: left;
-    line-height: 2;
-    animation: aparecer .6s ease;
+  .recuerdos .etiqueta {
+    color: #987044;
   }
 
-  .contenido-carta p { font-size: 14px; }
-
-  .contenido-carta .firma {
-    font: 29px "Parisienne", cursive;
-    text-align: right;
-    color: #9b526e;
-    margin-top: 35px;
+  .recuerdos .ornamento {
+    color: #ad8050;
   }
 
-  .carta .boton {
+  .recuerdos .introduccion {
+    color: #775e69;
+  }
+
+  .galeria {
+    max-width: 1100px;
+    margin: auto;
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 28px;
+  }
+
+  .tarjeta {
+    display: block;
+    width: 100%;
+    min-width: 0;
+    padding: 12px;
+    border: 1px solid #d2b38a;
+    background: #fffaf6;
     color: var(--vino);
-    border-color: #987044;
+    text-align: left;
+    cursor: pointer;
+    box-shadow: 0 9px 25px #3b1c2b12;
+    transition: transform .3s, box-shadow .3s;
+    font-family: "Montserrat", sans-serif;
   }
 
-  .carta .boton:hover {
-    background: var(--vino);
-    color: var(--crema);
+  .tarjeta:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 18px 35px #3b1c2b25;
   }
 
-  /* PIE DE PÁGINA */
-  footer {
-    padding: 55px 20px;
+  .foto-tarjeta {
+    width: 100%;
+    height: 245px;
+    position: relative;
+    overflow: hidden;
+    background: #e7d8d9;
+  }
+
+  .foto-tarjeta img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform .5s;
+  }
+
+  .tarjeta:hover .foto-tarjeta img {
+    transform: scale(1.04);
+  }
+
+  .foto-tarjeta span {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    background: #29151fe8;
+    color: var(--dorado);
+    padding: 6px 10px;
+    font: 16px "Cormorant Garamond", serif;
+  }
+
+  .texto-tarjeta {
+    padding: 16px 8px 10px;
+  }
+
+  .texto-tarjeta h3 {
+    font-size: 26px;
+    line-height: 1.05;
+    margin: 0 0 8px;
+    color: #65364d;
+  }
+
+  .texto-tarjeta p {
+    color: #826a75;
+    font-size: 10px;
+    margin: 0 0 14px;
+    line-height: 1.6;
+  }
+
+  .texto-tarjeta small {
+    color: #9b7951;
+    font-size: 8px;
+    letter-spacing: 1.5px;
+    font-weight: 600;
+  }
+
+  /* FRASE FINAL */
+  .frase-final {
+    padding: 100px 8%;
     text-align: center;
-    background: #1d0c15;
+    background:
+      radial-gradient(ellipse at center, #62374d, #301a27 75%);
+  }
+
+  .frase-final > span {
+    display: block;
+    font-size: 45px;
+    color: var(--dorado);
+    margin-bottom: 18px;
+  }
+
+  .frase-final .etiqueta {
+    color: var(--dorado);
+  }
+
+  .frase-final h2 {
+    max-width: 800px;
+    margin: 25px auto;
+    font-size: clamp(32px, 5vw, 48px);
+  }
+
+  .frase-final > p:last-child {
+    color: var(--rosa);
+    font: 23px "Parisienne", cursive;
+  }
+
+  /* CARTA */
+  .carta {
+    background: #f2e8e1;
+    color: var(--vino);
+  }
+
+  .carta .etiqueta {
+    color: #987044;
+  }
+
+  .carta .introduccion {
+    color: #775e69;
+  }
+
+  .sobre {
+    max-width: 500px;
+    margin: auto;
+    padding: 45px 25px;
+    background: #fffaf6;
+    border: 1px solid #c7a77c;
+    text-align: center;
+    box-shadow: 0 15px 35px #3d243018;
+  }
+
+  .sello {
+    width: 65px;
+    height: 65px;
+    display: grid;
+    place-items: center;
+    margin: auto;
+    border-radius: 50%;
+    background: #482638;
+    color: var(--dorado);
+    font-size: 30px;
+  }
+
+  .sobre p {
+    font: 26px "Parisienne", cursive;
+    color: #78465c;
+  }
+
+  .boton-carta {
+    color: var(--vino);
+    background: transparent;
+    cursor: pointer;
+  }
+
+  .boton-carta:hover {
+    color: var(--crema);
+    background: var(--vino);
+  }
+
+  .contenido-carta {
+    max-width: 750px;
+    margin: 35px auto 0;
+    padding: 45px;
+    background: #fffaf6;
+    border: 1px solid #c7a77c;
+    box-shadow: 0 15px 35px #3d243018;
+    color: #654b57;
+    font-size: 13px;
+    line-height: 2;
+    animation: aparecer .5s ease;
+  }
+
+  .contenido-carta p {
+    margin: 18px 0;
+  }
+
+  .contenido-carta .saludo-carta {
+    font: 30px "Parisienne", cursive;
+    color: #a15e79;
+  }
+
+  .firma-carta {
+    text-align: right;
+    font: 30px "Parisienne", cursive;
+    color: #a15e79;
+    margin-top: 35px !important;
+  }
+
+  /* PIE */
+  footer {
+    background: #1d1017;
+    text-align: center;
+    padding: 55px 20px;
   }
 
   .corazon-footer {
     color: var(--dorado);
-    font-size: 35px;
+    font-size: 38px;
   }
 
   footer p {
-    font: 25px "Cormorant Garamond", serif;
+    font: 27px "Cormorant Garamond", serif;
   }
 
   footer small {
     display: block;
-    color: #c7aeb7;
+    color: #c7b1bb;
+    font-size: 10px;
     margin: 8px;
   }
 
-  footer .hecho {
-    color: var(--dorado);
+  .volver {
+    display: inline-block;
     margin-top: 25px;
+    color: var(--dorado);
+    text-decoration: none;
+    font-size: 9px;
+    letter-spacing: 2px;
   }
 
-  /* VISOR DE FOTOS */
-  .visor {
+  /* MODAL DE RECUERDOS */
+  .modal {
     position: fixed;
     inset: 0;
-    z-index: 200;
-    background: #12080def;
+    z-index: 100;
     display: none;
     align-items: center;
     justify-content: center;
-    padding: 55px 65px;
+    padding: 25px;
+    background: #120a10ed;
+    overflow-y: auto;
   }
 
-  .visor.activo { display: flex; }
+  .modal.modal-abierto {
+    display: flex;
+  }
 
-  .visor-contenido {
-    text-align: center;
-    max-width: 750px;
+  .modal-contenido {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-width: 900px;
     width: 100%;
+    max-height: 90vh;
+    overflow-y: auto;
+    background: var(--crema);
+    color: var(--vino);
+    box-shadow: 0 20px 70px #0008;
+    animation: aparecer .35s ease;
   }
 
-  .visor-contenido img {
-    max-width: 100%;
-    max-height: 70vh;
-    object-fit: contain;
-    border: 10px solid #f6eee8;
-    box-shadow: 0 15px 50px #0008;
-  }
-
-  .visor-contenido p {
-    font: 26px "Parisienne", cursive;
-    color: var(--crema);
-    margin: 12px;
-  }
-
-  .visor-contenido small { color: var(--dorado); }
-
-  .cerrar, .flecha {
+  .cerrar-modal {
     position: absolute;
-    border: 0;
-    background: transparent;
-    color: white;
+    top: 10px;
+    right: 14px;
+    z-index: 3;
+    width: 38px;
+    height: 38px;
+    border: 1px solid #d8b77e;
+    border-radius: 50%;
+    background: #fffaf6;
+    color: var(--vino);
+    font-size: 27px;
     cursor: pointer;
   }
 
-  .cerrar {
-    top: 20px;
-    right: 30px;
-    font-size: 45px;
+  .modal-imagen {
+    min-height: 420px;
+    background: #d9c5c9;
   }
 
-  .flecha {
-    top: 50%;
-    font-size: 55px;
-    transform: translateY(-50%);
+  .modal-imagen img {
+    width: 100%;
+    height: 100%;
+    min-height: 420px;
+    display: block;
+    object-fit: cover;
   }
 
-  .anterior { left: 20px; }
-  .siguiente { right: 20px; }
+  .modal-texto {
+    padding: 65px 40px 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+
+  .modal-texto .etiqueta {
+    color: #9b7951;
+    font-size: 8px;
+  }
+
+  .modal-texto h2 {
+    color: #65364d;
+    font-size: 40px;
+  }
+
+  .modal-texto .ornamento {
+    color: #b18a5b;
+    margin: 15px 0;
+  }
+
+  .modal-texto p {
+    color: #765d68;
+    font-size: 12px;
+    line-height: 2;
+    white-space: normal;
+  }
+
+  .modal-corazon {
+    color: #b87991;
+    font-size: 32px;
+    text-align: right;
+    margin-top: 15px;
+  }
 
   @keyframes aparecer {
     from {
@@ -954,86 +1532,290 @@
     }
   }
 
-  /* DISEÑO PARA CELULARES */
-  @media (max-width: 700px) {
-    nav {
-      flex-direction: column;
-      padding: 12px;
-      gap: 12px;
-    }
-
-    .enlaces {
-      gap: 13px;
-      flex-wrap: wrap;
-      justify-content: center;
-    }
-
-    .enlaces a { font-size: 9px; }
-
-    .portada {
-      min-height: 570px;
-      padding: 80px 18px;
-    }
-
-    .seccion { padding: 75px 6%; }
-
-    .contador { gap: 8px; }
-
-    .contador div {
-      min-width: 68px;
-      padding: 12px 6px;
-    }
-
-    .contador strong { font-size: 27px; }
-
-    .contador span {
-      font-size: 8px;
-      letter-spacing: 1px;
+  /* TABLET */
+  @media (max-width: 900px) {
+    .historia-contenido {
+      gap: 35px;
     }
 
     .galeria {
       grid-template-columns: repeat(2, minmax(0, 1fr));
-      gap: 14px;
     }
 
-    .polaroid {
-      padding: 8px 8px 14px;
+    .foto-tarjeta {
+      height: 230px;
     }
-
-    .polaroid img { height: 175px; }
-
-    .polaroid .titulo-tarjeta {
-      font-size: 21px;
-      padding-top: 13px;
-    }
-
-    .polaroid small {
-      font-size: 9px;
-      line-height: 1.5;
-    }
-
-    .contenido-carta { padding: 23px; }
-
-    .visor { padding: 55px 35px; }
-
-    .visor-contenido img { max-height: 65vh; }
-
-    .anterior { left: 5px; }
-    .siguiente { right: 5px; }
-
-    .flecha { font-size: 38px; }
-
-    .spotify iframe { height: 380px; }
   }
 
-  @media (max-width: 390px) {
-    .galeria { grid-template-columns: 1fr; }
+  /* CELULAR */
+  @media (max-width: 650px) {
+    .navegacion {
+      min-height: 65px;
+      padding: 10px 18px;
+      flex-wrap: wrap;
+    }
 
-    .polaroid img { height: 260px; }
+    .marca {
+      font-size: 23px;
+    }
 
-    .polaroid .titulo-tarjeta { font-size: 24px; }
+    .menu-toggle {
+      display: block;
+    }
 
-    .polaroid small { font-size: 10px; }
+    .menu {
+      display: none;
+      width: 100%;
+      flex-direction: column;
+      align-items: stretch;
+      gap: 0;
+      padding: 8px 0;
+    }
+
+    .menu.menu-abierto {
+      display: flex;
+    }
+
+    .menu a {
+      padding: 13px 8px;
+      border-top: 1px solid #d8b77e20;
+      font-size: 11px;
+    }
+
+    .portada {
+      min-height: 620px;
+      padding: 55px 25px;
+    }
+
+    .portada-marco {
+      padding: 50px 17px;
+    }
+
+    .portada h1 {
+      font-size: clamp(48px, 13vw, 70px);
+    }
+
+    .nombres-portada {
+      font-size: 30px;
+    }
+
+    .decoracion {
+      font-size: 32px;
+    }
+
+    .decoracion-uno {
+      left: 4%;
+      top: 7%;
+    }
+
+    .decoracion-dos {
+      right: 4%;
+      bottom: 8%;
+    }
+
+    .decoracion-tres {
+      right: 5%;
+      top: 13%;
+    }
+
+    .seccion {
+      padding: 75px 20px;
+    }
+
+    .encabezado {
+      margin-bottom: 38px;
+    }
+
+    h2 {
+      font-size: 39px;
+    }
+
+    .introduccion {
+      font-size: 12px;
+    }
+
+    .historia-contenido {
+      grid-template-columns: 1fr;
+      gap: 30px;
+    }
+
+    .historia-imagen img {
+      height: 320px;
+    }
+
+    .historia-texto {
+      font-size: 13px;
+    }
+
+    .musica-contenedor {
+      padding: 25px 15px;
+    }
+
+    .musica-titulo {
+      font-size: 28px;
+    }
+
+    .musica-contenedor iframe {
+      height: 380px;
+    }
+
+    .contador-marco {
+      padding: 30px 12px;
+    }
+
+    .contador {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 10px;
+    }
+
+    .contador div {
+      min-width: 0;
+      padding: 15px 5px;
+    }
+
+    .contador strong {
+      font-size: 38px;
+    }
+
+    .contador span {
+      font-size: 8px;
+    }
+
+    .proximo-aniversario {
+      padding: 28px 12px;
+    }
+
+    .proximo-aniversario h3 {
+      font-size: 29px;
+    }
+
+    .capitulos-lista {
+      padding-left: 28px;
+    }
+
+    .numero-capitulo {
+      left: -46px;
+    }
+
+    .capitulo {
+      padding-left: 10px;
+    }
+
+    .capitulo h3 {
+      font-size: 25px;
+    }
+
+    .capitulo p {
+      font-size: 11px;
+    }
+
+    .galeria {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    .tarjeta {
+      padding: 7px;
+    }
+
+    .foto-tarjeta {
+      height: 175px;
+    }
+
+    .texto-tarjeta {
+      padding: 12px 5px 8px;
+    }
+
+    .texto-tarjeta h3 {
+      font-size: 21px;
+    }
+
+    .texto-tarjeta p {
+      font-size: 9px;
+    }
+
+    .texto-tarjeta small {
+      font-size: 7px;
+      letter-spacing: .8px;
+    }
+
+    .frase-final {
+      padding: 75px 22px;
+    }
+
+    .frase-final h2 {
+      font-size: 35px;
+    }
+
+    .contenido-carta {
+      padding: 27px 20px;
+    }
+
+    .modal {
+      padding: 12px;
+      align-items: center;
+    }
+
+    .modal-contenido {
+      grid-template-columns: 1fr;
+      max-height: 94vh;
+      width: 100%;
+    }
+
+    .modal-imagen {
+      min-height: 0;
+      height: 260px;
+    }
+
+    .modal-imagen img {
+      min-height: 0;
+      height: 260px;
+    }
+
+    .modal-texto {
+      padding: 28px 23px 25px;
+    }
+
+    .modal-texto h2 {
+      font-size: 34px;
+      padding-right: 15px;
+    }
+
+    .modal-texto p {
+      font-size: 12px;
+      line-height: 1.8;
+    }
+
+    .cerrar-modal {
+      top: 8px;
+      right: 8px;
+    }
+  }
+
+  /* CELULARES MUY PEQUEÑOS */
+  @media (max-width: 370px) {
+    .galeria {
+      grid-template-columns: 1fr;
+      gap: 18px;
+    }
+
+    .foto-tarjeta {
+      height: 260px;
+    }
+
+    .texto-tarjeta h3 {
+      font-size: 25px;
+    }
+
+    .portada h1 {
+      font-size: 47px;
+    }
+
+    .etiqueta-portada {
+      font-size: 8px;
+      letter-spacing: 2px;
+    }
   }
 </style>
 
