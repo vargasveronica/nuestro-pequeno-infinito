@@ -1,4 +1,3 @@
-
 ---
 ---
 <!DOCTYPE html>
@@ -15,6 +14,27 @@
 </head>
 
 <body>
+
+<!-- PANTALLA DE ESPERA -->
+<div id="pantallaEspera" class="pantalla-espera">
+  <div class="espera-marco">
+    <span class="espera-corazon">♡</span>
+    <p class="etiqueta">UNA SORPRESA PARA TI</p>
+    <h1>Nuestro pequeño <em>infinito</em></h1>
+    <p class="espera-texto">
+      Hay algo especial esperando por ti.
+      Esta historia tiene una fecha para ser descubierta.
+    </p>
+    <p class="espera-fecha">19 · 11 · 2026</p>
+    <div class="contador-espera">
+      <div><strong id="esperaDias">00</strong><span>DÍAS</span></div>
+      <div><strong id="esperaHoras">00</strong><span>HORAS</span></div>
+      <div><strong id="esperaMinutos">00</strong><span>MINUTOS</span></div>
+      <div><strong id="esperaSegundos">00</strong><span>SEGUNDOS</span></div>
+    </div>
+    <p class="espera-pie">Con cariño, para ti ♡</p>
+  </div>
+</div>
 
 <nav class="navegacion">
   <a href="#inicio" class="marca">Nuestro infinito <span>♡</span></a>
@@ -118,7 +138,7 @@
       </iframe>
 
       <button id="iniciarMusica" class="boton-musica">
-        ♡ REPRODUCIR NUESTRA MÚSICA ♡
+        ♡ ABRIR NUESTRA MÚSICA EN SPOTIFY ♡
       </button>
     </div>
   </section>
@@ -471,9 +491,53 @@
 </div>
 
 <script is:inline>
+  // ELEMENTOS GENERALES
+  const obtener = (id) => document.getElementById(id);
+
+  // DESBLOQUEO AUTOMÁTICO DE LA PÁGINA
+  const fechaDesbloqueo = new Date("2026-11-19T00:00:00-05:00").getTime();
+  const pantallaEspera = obtener("pantallaEspera");
+
+  function actualizarDesbloqueo() {
+    const restanteEspera = fechaDesbloqueo - Date.now();
+
+    if (restanteEspera <= 0) {
+      pantallaEspera.hidden = true;
+      return;
+    }
+
+    pantallaEspera.hidden = false;
+
+    obtener("esperaDias").textContent = String(
+      Math.floor(restanteEspera / 86400000)
+    ).padStart(2, "0");
+
+    obtener("esperaHoras").textContent = String(
+      Math.floor((restanteEspera % 86400000) / 3600000)
+    ).padStart(2, "0");
+
+    obtener("esperaMinutos").textContent = String(
+      Math.floor((restanteEspera % 3600000) / 60000)
+    ).padStart(2, "0");
+
+    obtener("esperaSegundos").textContent = String(
+      Math.floor((restanteEspera % 60000) / 1000)
+    ).padStart(2, "0");
+  }
+
+  actualizarDesbloqueo();
+
+  const intervaloDesbloqueo = setInterval(() => {
+    actualizarDesbloqueo();
+
+    if (Date.now() >= fechaDesbloqueo) {
+      clearInterval(intervaloDesbloqueo);
+    }
+  }, 1000);
+
   // MENÚ PARA CELULARES
-  const menuToggle = document.getElementById("menuToggle");
-  const menu = document.getElementById("menu");
+  const menuToggle = obtener("menuToggle");
+  const menu = obtener("menu");
 
   menuToggle.addEventListener("click", () => {
     menu.classList.toggle("menu-abierto");
@@ -487,16 +551,15 @@
 
   // CONTADOR DE TIEMPO
   const inicio = new Date("2025-05-19T00:00:00-05:00").getTime();
-  const aniversario = new Date("2026-11-19T00:00:00-05:00").getTime();
-
-  const obtener = (id) => document.getElementById(id);
+  const fechaAniversario = new Date("2026-11-19T00:00:00-05:00").getTime();
 
   function actualizarContadores() {
     const ahora = Date.now();
     const transcurrido = Math.max(0, ahora - inicio);
-    const restante = Math.max(0, aniversario - ahora);
+    const restante = Math.max(0, fechaAniversario - ahora);
 
     obtener("dias").textContent = Math.floor(transcurrido / 86400000);
+
     obtener("horas").textContent = String(
       Math.floor((transcurrido % 86400000) / 3600000)
     ).padStart(2, "0");
@@ -510,6 +573,7 @@
     ).padStart(2, "0");
 
     obtener("cdias").textContent = Math.floor(restante / 86400000);
+
     obtener("choras").textContent = String(
       Math.floor((restante % 86400000) / 3600000)
     ).padStart(2, "0");
@@ -531,22 +595,15 @@
   actualizarContadores();
   setInterval(actualizarContadores, 1000);
 
-  // REPRODUCTOR DE SPOTIFY
-  const reproductor = obtener("spotifyPlayer");
+  // BOTÓN PARA ABRIR NUESTRA LISTA DE SPOTIFY
   const botonMusica = obtener("iniciarMusica");
 
-  const urlSpotify =
-    "https://open.spotify.com/embed/playlist/7wLdnNferEN3IH6IMJgMMw?utm_source=generator&theme=0";
-
   botonMusica.addEventListener("click", () => {
-    reproductor.src = urlSpotify + "&autoplay=1";
-    botonMusica.textContent = "NUESTRA MÚSICA ♡";
-  });
-
-  // INTENTO DE REPRODUCCIÓN AUTOMÁTICA
-  // El navegador o Spotify pueden impedir el sonido automático.
-  window.addEventListener("load", () => {
-    reproductor.src = urlSpotify + "&autoplay=1";
+    window.open(
+      "https://open.spotify.com/playlist/7wLdnNferEN3IH6IMJgMMw?si=HLmkjE8nTK-zEwZp8YP0xA",
+      "_blank",
+      "noopener,noreferrer"
+    );
   });
 
   // CARTA
@@ -622,6 +679,8 @@
 
   function abrirRecuerdo(indice) {
     const recuerdo = recuerdos[indice];
+
+    if (!recuerdo) return;
 
     obtener("modalImagen").src = recuerdo.foto;
     obtener("modalTitulo").textContent = recuerdo.titulo;
@@ -710,6 +769,100 @@
 
   button, a {
     -webkit-tap-highlight-color: transparent;
+  }
+
+  /* PANTALLA DE ESPERA */
+  .pantalla-espera {
+    position: fixed;
+    inset: 0;
+    z-index: 9999;
+    display: grid;
+    place-items: center;
+    padding: 20px;
+    background: radial-gradient(ellipse at center, #72465a, #462638 55%, #29151f 100%);
+    text-align: center;
+  }
+
+  .pantalla-espera[hidden] {
+    display: none;
+  }
+
+  .espera-marco {
+    width: 100%;
+    max-width: 650px;
+    padding: 45px 22px;
+    border: 1px solid #d8b77e;
+    outline: 1px solid #d8b77e55;
+    outline-offset: 8px;
+  }
+
+  .espera-corazon {
+    display: block;
+    color: #d7aab8;
+    font-size: 55px;
+    margin-bottom: 15px;
+  }
+
+  .espera-marco .etiqueta {
+    color: #d8b77e;
+    letter-spacing: 3px;
+    font-size: 9px;
+  }
+
+  .espera-marco h1 {
+    font-size: clamp(42px, 8vw, 70px);
+    line-height: 1;
+    margin: 20px 0;
+  }
+
+  .espera-marco h1 em {
+    color: #d7aab8;
+  }
+
+  .espera-texto {
+    color: #ead9df;
+    font-size: 12px;
+    max-width: 400px;
+    margin: 20px auto;
+  }
+
+  .espera-fecha {
+    color: #d8b77e;
+    letter-spacing: 4px;
+    font-size: 13px;
+    margin: 25px 0;
+  }
+
+  .contador-espera {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 8px;
+    margin: 25px 0;
+  }
+
+  .contador-espera div {
+    padding: 15px 5px;
+    background: #ffffff12;
+    border: 1px solid #d8b77e55;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .contador-espera strong {
+    color: #d8b77e;
+    font: 34px "Cormorant Garamond", serif;
+  }
+
+  .contador-espera span {
+    color: #f6eee8;
+    font-size: 8px;
+    letter-spacing: 1px;
+  }
+
+  .espera-pie {
+    color: #d7aab8;
+    font: 25px "Parisienne", cursive;
   }
 
   /* NAVEGACIÓN */
@@ -1859,6 +2012,22 @@
     .cerrar-modal {
       top: 8px;
       right: 8px;
+    }
+
+    .espera-marco {
+      padding: 35px 12px;
+    }
+
+    .contador-espera {
+      gap: 5px;
+    }
+
+    .contador-espera strong {
+      font-size: 27px;
+    }
+
+    .contador-espera span {
+      font-size: 7px;
     }
   }
 
